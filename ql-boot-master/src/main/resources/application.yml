@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/template?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: password
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: localhost
+    port: 6379
+    password: password
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+
+# https://sa-token.cc/
+sa-token:
+  token-name: Authorization
+  token-style: random-128
+  token-prefix: Bearer
+  is-read-cookie: false
+  is-read-body: false
+  is-concurrent: true
+  is-read-header: true
+  is-share: true
+  is-log: true
+  timeout: 2592000
+  active-timeout: -1
